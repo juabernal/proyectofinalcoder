@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMoveCC : MonoBehaviour
 {
@@ -53,8 +56,17 @@ public class PlayerMoveCC : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        
+        MainMenu();
     }
 
-    
+    public void MainMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("MainMenu");
+            Debug.Log("Menu Principal");
+        }
+    }
 }
 
