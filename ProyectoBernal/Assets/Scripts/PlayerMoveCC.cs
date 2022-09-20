@@ -27,6 +27,9 @@ public class PlayerMoveCC : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    //animacion
+    [SerializeField] Animator playerAnim;
+    
     void Start()
     {
         //movimiento
@@ -38,14 +41,18 @@ public class PlayerMoveCC : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(chequeoPiso.position, distanciaPiso, groundMask);
-        if (isGrounded && velocity.y <0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2;
+
         }
+        
+        
+       
 
         movX = Input.GetAxis("Horizontal");
         movZ = Input.GetAxis("Vertical");
-
+        
         Vector3 move = transform.right * movX + transform.forward * movZ;
         controller.Move(move * speed * Time.deltaTime);
 
@@ -56,7 +63,10 @@ public class PlayerMoveCC : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-        
+
+        playerAnim.SetFloat("velX", movX);
+        playerAnim.SetFloat("velY", movZ);
+
         MainMenu();
     }
 
@@ -68,5 +78,6 @@ public class PlayerMoveCC : MonoBehaviour
             Debug.Log("Menu Principal");
         }
     }
+    
 }
 
