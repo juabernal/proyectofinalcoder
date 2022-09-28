@@ -15,13 +15,18 @@ public class TimeGame : MonoBehaviour
     public float restante;
     private bool enMarcha;
 
+  
+
     private void Awake()
     {
         restante = (min * 60) + seg;
         enMarcha = true;
         
     }
-    
+   
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +41,7 @@ public class TimeGame : MonoBehaviour
                 enMarcha = false;
                 tiempo.gameObject.SetActive(false);
                 gameOverPanel.gameObject.SetActive(true);
-
+                
 
 
 
@@ -47,5 +52,8 @@ public class TimeGame : MonoBehaviour
              int tempSeg = Mathf.FloorToInt(restante % 60);
             tiempo.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
         }
+        
     }
+
+    
 }

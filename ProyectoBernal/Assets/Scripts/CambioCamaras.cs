@@ -11,39 +11,32 @@ public class CambioCamaras : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        indexNumber = 1;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            indexNumber++;
-        }
-        if (indexNumber == 1)
-        {
+
             cameras[0].SetActive(true);
             cameras[1].SetActive(false);
             cameras[2].SetActive(false);
-
         }
-        if (indexNumber == 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             cameras[0].SetActive(false);
             cameras[1].SetActive(true);
             cameras[2].SetActive(false);
-
         }
-        if (indexNumber == 3)
-        {
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        { 
             cameras[0].SetActive(false);
             cameras[1].SetActive(false);
             cameras[2].SetActive(true);
         }
-        if (indexNumber == 4)
-        {
-            indexNumber = 1;
-        }
+
+       
     }
 }

@@ -30,6 +30,7 @@ public class PlayerMoveCC : MonoBehaviour
     //animacion
     [SerializeField] Animator playerAnim;
     
+    
     void Start()
     {
         //movimiento
@@ -72,7 +73,7 @@ public class PlayerMoveCC : MonoBehaviour
 
     public void MainMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
             Debug.Log("Menu Principal");
