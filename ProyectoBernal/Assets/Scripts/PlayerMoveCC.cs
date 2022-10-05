@@ -35,6 +35,7 @@ public class PlayerMoveCC : MonoBehaviour
     {
         //movimiento
         controller = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 

@@ -6,11 +6,15 @@ TagManager:
   tags:
   - enPiso
   - clock
+  - picadura
+  - abeja
+  - item
+  - medicine
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - abejas
   - Water
   - UI
   - Ground

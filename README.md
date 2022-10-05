@@ -3,7 +3,9 @@
 Team:
     - Alumno Bernal Juan Ignacio
 
-1° Entrega, por ahora solo escenario, falta configurar scripts y movimientos.
+Proyecto para Coderhouse - Primer Videojuego en Unity 3D.
+
+Se trata de un juego contra el tiempo, de recolección de piezas, con algunos enemigos que hay que esquivar, los cuales nos van a dificultar la llegada a la meta que es coleccionar todas las piezas.
     
 
 Tools:

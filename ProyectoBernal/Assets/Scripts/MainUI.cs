@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class MainUI : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void OnClickPlay()
     {
         SceneManager.LoadScene("ProyectoFinal");

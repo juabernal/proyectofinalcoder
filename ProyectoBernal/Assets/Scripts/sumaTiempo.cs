@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class sumaTiempo : MonoBehaviour
 {
+
+    public float cooldown;
+    public float ultimorecuento;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,15 @@ public class sumaTiempo : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("clock");
-        FindObjectOfType<TimeGame>().restante += 30;
+        if (Time.time - ultimorecuento < cooldown)
+        {
+
+            return;
+        }
+        FindObjectOfType<TimeGame>().restante += 30f;
+        ultimorecuento = Time.time;
+        
+        Debug.Log("Más Tiempo!");
+        
     }
 }
